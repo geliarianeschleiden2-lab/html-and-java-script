@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood-Based Study Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <header>
+            <h1>📚 Mood-Based Study Planner</h1>
+            <p>Create a study routine based on how you're feeling today.</p>
+        </header>
+
+        <section class="form-section">
+
+            <div class="input-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+                <label for="subject">Subject to Study:</label>
+                <input type="text" id="subject" placeholder="e.g. Math, Science, English">
+            </div>
+
+            <div class="input-group">
+                <label for="duration">Preferred Study Duration:</label>
+                <select id="duration">
+                    <option value="">-- Select Duration --</option>
+                    <option value="30">30 Minutes</option>
+                    <option value="60">1 Hour</option>
+                    <option value="90">1 Hour 30 Minutes</option>
+                    <option value="120">2 Hours</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="mood">How are you feeling today?</label>
+                <select id="mood">
+                    <option value="">-- Select Mood --</option>
+                    <option value="motivated">💪 Motivated</option>
+                    <option value="tired">😴 Tired</option>
+                    <option value="stressed">😖 Stressed</option>
+                    <option value="happy">😊 Happy</option>
+                    <option value="sad">😔 Sad</option>
+                </select>
+            </div>
+
+            <button onclick="generatePlan()">Generate Study Plan</button>
+
+        </section>
+
+        <section class="result-section">
+            <h2>Your Personalized Study Plan</h2>
+            <div id="studyPlan" class="plan-box">
+                Your plan will appear here...
+            </div>
+        </section>
+
+        <footer>
+            <p>Stay consistent. Small progress is still progress 🌱</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
